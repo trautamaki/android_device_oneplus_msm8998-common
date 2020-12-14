@@ -47,7 +47,9 @@ on init
 
     # Button backlight permissions
     chown system system /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/button-backlight/max_brightness
     chmod 660 /sys/class/leds/button-backlight/brightness
+    chmod 660 /sys/class/leds/button-backlight/max_brightness
 
     # LCD backlight permissions
     chown system system /sys/class/leds/lcd-backlight/brightness
