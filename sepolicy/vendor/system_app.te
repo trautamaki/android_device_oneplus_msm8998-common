@@ -1,8 +1,8 @@
 allow system_app proc_touchpanel:dir { search };
 allow system_app proc_touchpanel:file { rw_file_perms };
 
-allow system_app sysfs_button_backlight:dir { search };
-allow system_app sysfs_button_backlight:file { rw_file_perms };
+allow system_app sysfs_brightness:dir { search };
+allow system_app sysfs_brightness:file { rw_file_perms };
 allow system_app sysfs_fpc_key:file { rw_file_perms };
 allow system_app sysfs_fpc_screen:file { rw_file_perms };
 allow system_app sysfs_fpc_proximity:file { rw_file_perms };
