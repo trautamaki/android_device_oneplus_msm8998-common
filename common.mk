@@ -234,9 +234,6 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
-# HWUI
-TARGET_USES_VULKAN := true
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
