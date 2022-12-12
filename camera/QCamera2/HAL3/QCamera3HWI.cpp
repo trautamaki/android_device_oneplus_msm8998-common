@@ -1674,9 +1674,9 @@ void QCamera3HardwareInterface::addToPPFeatureMask(int stream_format,
 #endif
     if ((property_len > 2) && (feature_mask_value[0] == '0') &&
             (feature_mask_value[1] == 'x')) {
-        args_converted = sscanf(feature_mask_value, "0x%llx", &feature_mask);
+        args_converted = sscanf(feature_mask_value, "0x%" PRIu64, &feature_mask);
     } else {
-        args_converted = sscanf(feature_mask_value, "%lld", &feature_mask);
+        args_converted = sscanf(feature_mask_value, "%" PRIu64, &feature_mask);
     }
     if (1 != args_converted) {
         feature_mask = 0;
