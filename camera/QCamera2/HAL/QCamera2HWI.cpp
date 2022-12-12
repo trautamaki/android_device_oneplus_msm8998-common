@@ -4286,7 +4286,7 @@ int QCamera2HardwareInterface::startRecording()
                     new QCameraVideoMemory(mGetMemory, mCallbackCookie, bCachedMem);
         if (videoMemFb == NULL) {
             LOGE("Out of memory for video obj");
-            return NULL;
+            return BAD_VALUE;
         }
         mParameters.getStreamFormat(CAM_STREAM_TYPE_VIDEO,fmt);
         if (mParameters.isUBWCEnabled() &&

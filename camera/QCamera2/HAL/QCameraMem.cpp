@@ -2663,7 +2663,7 @@ int QCameraGrallocMemory::cacheOps(uint32_t index, unsigned int cmd)
         return BAD_INDEX;
 
     if (mCameraMemory[index] == NULL) {
-        return NULL;
+        return BAD_VALUE;
     }
 
     return cacheOpsInternal(index, cmd, mCameraMemory[index]->data);
