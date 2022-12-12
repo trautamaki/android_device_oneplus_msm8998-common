@@ -75,13 +75,15 @@ public:
     static QCameraDisplay* instance();
 
 class DisplayEventCallback : public IEventCallback {
+    #define UNUSED(x) (void)(x)
     Return<void> onVsync(uint64_t timestamp, uint32_t count) override {
-        ALOGV("onVsync: timestamp=%llu count=%d", timestamp, count);
+        UNUSED(count);
         QCameraDisplay::instance()->computeAverageVsyncInterval(timestamp);
         return Void();
     }
     Return<void> onHotplug(uint64_t timestamp, bool connected) override {
-        ALOGV("onHotplug: timestamp=%llu connected=%s", timestamp, connected ? "true" : "false");
+        UNUSED(timestamp);
+        UNUSED(connected);
         return Void();
     }
 };
