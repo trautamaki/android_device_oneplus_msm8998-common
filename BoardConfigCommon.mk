@@ -64,6 +64,7 @@ TARGET_KERNEL_CONFIG := lineage_oneplus5_defconfig
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
